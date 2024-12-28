@@ -12,10 +12,10 @@ function Nav() {
 					<Link href="../pages/insumos">insumos</Link>
 				</li>
 				<li>
-					<Link href={"/costos"}>costo</Link>
+					<Link href={"../pages/costos"}>costo</Link>
 				</li>
 				<li>
-					<Link href={"/produccion"}>produccion</Link>
+					<Link href={"../pages/produccion"}>produccion</Link>
 				</li>
 			</ul>
 		</nav>
