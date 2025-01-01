@@ -27,7 +27,6 @@ function customHookFirebase(coleccion) {
 		};
 		fetchData();
 	}, [coleccion]);
-	console.log(Productos);
 
 	return { Productos, loading, error };
 }

@@ -1,22 +1,33 @@
-"use client";
-import customHookFirebase from "@/app/customHookFirebase";
+import Tabla from "@/app/components/Tabla";
+import React from "react";
 
-function Page() {
-	const { Productos, loading, error } = customHookFirebase("insumos");
-	if (error) {
-		return <div>error</div>;
-	}
-	if (loading) {
-		return <div>cargando...</div>;
-	}
-
+function page() {
 	return (
 		<>
-			{Productos.map((insumo) => (
-				<div key={insumo.id}>hola</div>
-			))}
+			<section className="h-[50px] flex items-center justify-center">
+				<input
+					type="text"
+					name="search"
+					id=""
+					placeholder="busqueda"
+					className="border border-black p-2"
+				/>
+				<button className="pl-3 btn">Buscar</button>
+			</section>
+			<section>
+				<div className="w-[80%]  mx-auto">
+					<div className="h-[50px] flex items-center justify-around">
+						<h3 className="uppercase">nombre</h3>
+						<h3 className="uppercase">unidad</h3>
+						<h3 className="uppercase">presentacion</h3>
+						<h3 className="uppercase">precio</h3>
+					</div>
+
+					<Tabla />
+				</div>
+			</section>
 		</>
 	);
 }
 
-export default Page;
+export default page;
